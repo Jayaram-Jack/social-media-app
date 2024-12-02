@@ -2,20 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Finalized color palettes */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f1f5f9; /* Light background */
+  --foreground: #1f2937; /* Dark foreground */
+  --primary: #3b82f6; /* Primary blue */
+  --primary-foreground: #ffffff; /* Text on primary elements */
+  --secondary: #e2e8f0; /* Secondary background */
+  --secondary-foreground: #475569; /* Text on secondary elements */
+  --muted: #f8fafc; /* Muted background */
+  --muted-foreground: #64748b; /* Text for muted elements */
+  --accent: #38bdf8; /* Accent blue */
+  --accent-foreground: #0f172a; /* Text on accent elements */
+  --card: #ffffff; /* Card background */
+  --card-foreground: #1e293b; /* Card text */
+  --border: #d1d5db; /* Neutral border */
+  --input: #f8fafc; /* Input background */
+  --ring: ##3b82f6; /* Focus ring */
+  --hover-bg: #e2e8f0; /* Hover background */
+  --hover-primary-bg: #1e40af; /* Primary hover */
+  --hover-secondary-bg: #cbd5e1; /* Secondary hover */
+  --secondary-text: #6b7280;
+  --success: #22c55e; /* Green for success */
+  --success-foreground: #ffffff;
+  --warning: #facc15; /* Yellow for warnings */
+  --warning-foreground: #1e293b;
+  --error: #ef4444; /* Red for errors */
+  --error-foreground: #ffffff;
+
+  /* Shadows */
+  --shadow-small: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #1f2937; /* Dark background */
+  --foreground: #f1f5f9; /* Light foreground */
+  --primary: #3b82f6; /* Bright blue */
+  --primary-foreground: #ffffff; /* Text on primary elements */
+  --secondary: #374151; /* Secondary background */
+  --secondary-foreground: #d1d5db; /* Text on secondary elements */
+  --muted: #4b5563; /* Muted background */
+  --muted-foreground: #9ca3af; /* Text for muted elements */
+  --accent: #60a5fa; /* Accent blue */
+  --accent-foreground: #f9fafb; /* Text on accent elements */
+  --card: #374151; /* Card background */
+  --card-foreground: #e5e7eb; /* Card text */
+  --border: #4b5563; /* Neutral border */
+  --input: #374151; /* Input background */
+  --ring: #3b82f6; /* Focus ring */
+  --hover-bg: #4b5563; /* Hover background */
+  --hover-primary-bg: #1e40af; /* Primary hover */
+  --hover-secondary-bg: #4b5563; /* Secondary hover */
+
+  --secondary-text: #6b7280;
+  --success: #22c55e; /* Green for success */
+  --success-foreground: #ffffff;
+  --warning: #facc15; /* Yellow for warnings */
+  --warning-foreground: #1e293b;
+  --error: #ef4444; /* Red for errors */
+  --error-foreground: #ffffff;
+
+  /* Shadows */
+  --shadow-small: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
 }

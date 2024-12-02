@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+types - Recommended File Structure
+/src/types/
 
-## Getting Started
+Core types and shared interfaces
+Feature-specific types
+API types
+UI component types
+/src/types/core/
 
-First, run the development server:
+models.ts - Base interfaces
+enums.ts - Global enums
+configs.ts - Global configuration interfaces
+/src/types/features/[feature-name]/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[feature].config.ts - Feature configuration
+[feature].model.ts - Feature data models
+[feature].enum.ts - Feature enums
+index.ts - Barrel exports
+/src/types/api/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+API request/response types
+API client configurations
+/src/types/ui/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Shared UI component interfaces
+Theme and style types
+Naming Conventions
+Files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Use .config.ts for configuration interfaces
+Use .model.ts for data models
+Use .enum.ts for enums
+Use lowercase with hyphens for filenames
+Interfaces:
 
-## Learn More
+Use PascalCase
+Suffix with purpose (Config, Model, Props, etc.)
+Be descriptive and specific
+Enums:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use PascalCase
+Group related enums in feature-specific files
+Use consistent naming patterns
+Import Strategy
+Use barrel exports (index.ts) for clean imports
+Use absolute imports with aliases
+Group imports by type (core, feature, UI)
